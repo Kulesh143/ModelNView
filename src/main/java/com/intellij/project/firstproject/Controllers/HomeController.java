@@ -8,14 +8,14 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 @Controller
 public class HomeController {
     @RequestMapping("home")
-    public ModelAndView home(@RequestParam("aname")String aname,@RequestParam("ability")String ability){
+    public ModelAndView home(Avatar avatar){
         ModelAndView mv=new ModelAndView();
-        mv.addObject("aname",aname);
-        mv.addObject("ability",ability);
+        mv.addObject("object",avatar);
         mv.setViewName("home");
         return mv;
     }

@@ -11,6 +11,6 @@
     <title>Spring Boot First App</title>
 </head>
 <body>
-Welcome ${aname} which has ${ability}
+Welcome ${object.id}, ${object.name}, you can ${object.ability}
 </body>
 </html>
